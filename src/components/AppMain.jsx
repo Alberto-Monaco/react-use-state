@@ -2,7 +2,7 @@ import { useState } from 'react'
 import languages from '../data/languages'
 
 export default function AppMain() {
-	const [language, setLanguage] = useState(0)
+	const [language, setLanguage] = useState(null)
 	function handleLanguage(e) {
 		const newLanguage = Number(e.target.getAttribute('data-index'))
 		setLanguage(newLanguage)
@@ -22,6 +22,7 @@ export default function AppMain() {
 						</div>
 					))}
 				</div>
+				{language === null && <p className='nothing'>Nessun linguaggio selezionato</p>}
 			</div>
 		</main>
 	)
