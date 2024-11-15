@@ -3,13 +3,24 @@ import languages from '../data/languages'
 
 export default function AppMain() {
 	const [language, setLanguage] = useState(0)
+	function handleLanguage(e) {
+		const newLanguage = Number(e.target.getAttribute('data-index'))
+		setLanguage(newLanguage)
+	}
 
 	return (
 		<main>
 			<div className='container'>
-				<div className='buttons'>
-					{languages.map((language) => (
-						<button key={language.id}>{language.title}</button>
+				<div className='row'>
+					{languages.map((languages, index) => (
+						<div className='buttons' key={languages.id}>
+							<button onClick={handleLanguage} data-index={index}>
+								{languages.title}
+							</button>
+							<div className='content'>
+								<p className={language == index ? 'active' : 'hide'}>{languages.description}</p>
+							</div>
+						</div>
 					))}
 				</div>
 			</div>
