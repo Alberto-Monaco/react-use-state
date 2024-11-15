@@ -1,0 +1,8 @@
+.hide {
+    display: none;
+}
+
+button {
+    cursor: auto;
+    margin: 0.5rem;
+}

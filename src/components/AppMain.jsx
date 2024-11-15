@@ -2,6 +2,8 @@ import { useState } from 'react'
 import languages from '../data/languages'
 
 export default function AppMain() {
+	const [language, setLanguage] = useState(0)
+
 	return (
 		<main>
 			<div className='container'>
