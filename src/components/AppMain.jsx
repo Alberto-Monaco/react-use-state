@@ -17,9 +17,8 @@ export default function AppMain() {
 							<button onClick={handleLanguage} data-index={index}>
 								{languages.title}
 							</button>
-							<div className='content'>
-								<p className={language == index ? 'active' : 'hide'}>{languages.description}</p>
-							</div>
+
+							<p className={language == index ? 'active' : 'hide'}>{languages.description}</p>
 						</div>
 					))}
 				</div>
