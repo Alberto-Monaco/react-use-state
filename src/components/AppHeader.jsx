@@ -1,3 +1,7 @@
 export default function AppHeader() {
-	return <header>AppHeader</header>
+	return (
+		<header>
+			<h1>Learn Web Development</h1>
+		</header>
+	)
 }
