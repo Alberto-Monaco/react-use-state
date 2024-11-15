@@ -14,7 +14,7 @@ export default function AppMain() {
 				<div className='row'>
 					{languages.map((languages, index) => (
 						<div className='buttons' key={languages.id}>
-							<button onClick={handleLanguage} data-index={index}>
+							<button onClick={handleLanguage} data-index={index} className={language == index ? 'active-button' : ''}>
 								{languages.title}
 							</button>
 

@@ -64,3 +64,8 @@ p {
 .nothing {
     text-align: center;
 }
+
+.active-button {
+    background-color: rgb(234, 150, 40);
+    color: #fff;
+}
