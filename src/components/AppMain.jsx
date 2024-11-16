@@ -17,9 +17,14 @@ export default function AppMain() {
 							<button onClick={handleLanguage} data-index={index} className={language == index ? 'active-button' : ''}>
 								{languages.title}
 							</button>
-
-							<p className={language == index ? 'active' : 'hide'}>{languages.description}</p>
 						</div>
+					))}
+				</div>
+				<div className='row'>
+					{languages.map((languages, index) => (
+						<p key={languages.id} className={language == index ? 'active' : 'hide'}>
+							{languages.description}
+						</p>
 					))}
 				</div>
 				{language === null && <p className='nothing'>Nessun linguaggio selezionato</p>}
